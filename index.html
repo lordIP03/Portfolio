@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Pathak - Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 mb-8 text-center;
+        }
+        .card {
+            @apply bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:-translate-y-2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Ishan Pathak</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="#experience" class="text-gray-600 hover:text-indigo-600 transition duration-300">Experience</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Hire Me</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600">Projects</a>
+            <a href="#experience" class="block py-2 text-gray-600 hover:text-indigo-600">Experience</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+            <a href="#contact" class="block mt-2 bg-indigo-600 text-white text-center px-4 py-2 rounded-lg hover:bg-indigo-700">Hire Me</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">Ishan Pathak</h1>
+                <h2 class="mt-4 text-2xl md:text-3xl font-semibold text-indigo-600">Web Developer & Front-End Designer</h2>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600">
+                    Aspiring full-stack developer with a passion for building responsive, user-friendly web experiences. Eager to contribute to a dynamic development team.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="#projects" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105">View My Work</a>
+                    <a href="Resume.pdf" target="_blank" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold border border-indigo-200 hover:bg-indigo-50 transition duration-300 transform hover:scale-105">View Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me & Skills -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-3">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
+                        <p class="mb-4">
+                            I'm a passionate and self-motivated web developer currently pursuing my B.Tech in Information Technology. With a strong foundation in front-end technologies and hands-on experience from my internship as a Web Design Intern, I specialize in creating beautiful, functional, and responsive websites.
+                        </p>
+                        <p class="mb-4">
+                            I thrive on solving problems and enjoy the process of turning complex ideas into clean, efficient code. I'm currently expanding my skillset into backend technologies like Node.js and am always eager to learn and adapt to new challenges in the ever-evolving world of web development.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Key Competencies</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center"><i data-feather="code" class="w-6 h-6 mr-3 text-indigo-500"></i><span>HTML, CSS, JavaScript</span></div>
+                            <div class="flex items-center"><i data-feather="smartphone" class="w-6 h-6 mr-3 text-indigo-500"></i><span>Responsive Web Design</span></div>
+                            <div class="flex items-center"><i data-feather="figma" class="w-6 h-6 mr-3 text-indigo-500"></i><span>UI/UX Design Principles</span></div>
+                            <div class="flex items-center"><i data-feather="coffee" class="w-6 h-6 mr-3 text-indigo-500"></i><span>Java Proficiency</span></div>
+                            <div class="flex items-center"><i data-feather="git-branch" class="w-6 h-6 mr-3 text-indigo-500"></i><span>Version Control (Git)</span></div>
+                             <div class="flex items-center"><i data-feather="share-2" class="w-6 h-6 mr-3 text-indigo-500"></i><span>React & Node.js (Learning)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">My Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project Card 1: UI Clones -->
+                    <div class="card">
+                        <div class="relative h-48 w-full overflow-hidden group">
+                            <!-- "Head Photo" - Visible by default -->
+                            <img src="https://placehold.co/600x400/6366f1/ffffff?text=UI+Clones" alt="UI Clones" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                            <!-- Screenshot - Hidden by default, revealed on hover -->
+                            <img src="assets/netflix.png" alt="UI Clones Screenshot" class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">UI Clones</h3>
+                            <p class="text-gray-600 mb-4">Replicated popular websites like Netflix and Amazon to demonstrate CSS expertise and attention to design detail.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">HTML</span>
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Travel Planner -->
+                    <div class="card">
+                         <div class="relative h-48 w-full overflow-hidden group">
+                            <img src="https://placehold.co/600x400/10b981/ffffff?text=Travel+Planner" alt="Travel Planner" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                            <img src="assets/nomad.png" alt="Travel Planner Screenshot" class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Nomad Speaks: Travel Planner</h3>
+                            <p class="text-gray-600 mb-4">A travel itinerary website to help users pre-plan vacations, featuring a contact/enquiry form for data collection.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">HTML</span>
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">CSS</span>
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">JavaScript</span>
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: DineReserve -->
+                    <div class="card">
+                        <div class="relative h-48 w-full overflow-hidden group">
+                            <img src="https://placehold.co/600x400/ef4444/ffffff?text=DineReserve" alt="DineReserve" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                            <img src="https://placehold.co/600x400/b91c1c/ffffff?text=DineReserve+SS" alt="DineReserve Screenshot" class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">DineReserve Hotel System</h3>
+                            <p class="text-gray-600 mb-4">A comprehensive table reservation system with food ordering, party hall booking, cost calculator, and menu search.</p>
+                             <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">HTML/CSS</span>
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4: Medi-Dash -->
+                    <div class="card">
+                        <div class="relative h-48 w-full overflow-hidden group">
+                            <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Medi-Dash" alt="Medi-Dash" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                            <img src="assets/medi-dash.png" alt="Medi-Dash Screenshot" class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Medi-Dash</h3>
+                            <p class="text-gray-600 mb-4">An appointment booking platform for healthcare providers with scheduling, reminders, and patient management.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">Web Tech</span>
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">Data Handling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---Project Card 5: Add my Brand-->
+                    <div class="card">
+  <div class="relative h-48 w-full overflow-hidden group">
+    <img src="https://placehold.co/600x400/0f172a/ffffff?text=AdmyBrand+Landing" alt="AdmyBrand" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+    <img src="assets/AdmyBrand.png" alt="AdmyBrand Screenshot" class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-110">
+  </div>
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-2">AdmyBrand Landing Page</h3>
+    <p class="text-gray-600 mb-4">Developed a high-conversion landing page for AdmyBrand with responsive UI and clean layout focused on brand communication.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">HTML</span>
+      <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">Tailwind CSS</span>
+      <span class="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-full">JavaScript</span>
+    </div>
+  </div>
+</div>
+
+                     <!-- Project Card 6: PeakPursuit -->
+                    <div class="card">
+                        <div class="relative h-48 w-full overflow-hidden group">
+                            <img src="https://placehold.co/600x400/f97316/ffffff?text=PeakPursuit" alt="PeakPursuit" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                            <img src="assets/peak.png" alt="PeakPursuit Screenshot" class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-110">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">PeakPursuit (In Development)</h3>
+                            <p class="text-gray-600 mb-4">A sophisticated platform to recommend ideal camping locations in India by analyzing user data and preferences.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-200 text-yellow-800 px-2 py-1 text-sm rounded-full">Advanced JS</span>
+                                <span class="bg-yellow-200 text-yellow-800 px-2 py-1 text-sm rounded-full">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Experience & Education</h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- New Internship Entry -->
+                    <div class="relative pl-8 sm:pl-12 py-6 group">
+                        <div class="absolute top-0 left-0 h-full w-0.5 bg-gray-200"></div>
+                        <div class="absolute top-5 left-[-9px] sm:left-[-23px] w-5 h-5 sm:w-12 sm:h-12 bg-white rounded-full border-2 border-indigo-500 flex items-center justify-center">
+                           <i data-feather="briefcase" class="w-3 h-3 sm:w-6 sm:h-6 text-indigo-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Technical Analyst Intern</h3>
+                        <p class="text-indigo-500 font-semibold">Requin Solutions | July 2025 - Present</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                            <li>Analyzing technical requirements for various projects.</li>
+                            <li>Assisting senior analysts in developing and testing new software solutions.</li>
+                            <li>Collaborating with development teams to ensure project specifications are met.</li>
+                        </ul>
+                    </div>
+                    <!-- Previous Internship -->
+                    <div class="relative pl-8 sm:pl-12 py-6 group">
+                        <div class="absolute top-0 left-0 h-full w-0.5 bg-gray-200"></div>
+                        <div class="absolute top-5 left-[-9px] sm:left-[-23px] w-5 h-5 sm:w-12 sm:h-12 bg-white rounded-full border-2 border-indigo-500 flex items-center justify-center">
+                           <i data-feather="briefcase" class="w-3 h-3 sm:w-6 sm:h-6 text-indigo-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Web Design Intern</h3>
+                        <p class="text-indigo-500 font-semibold">Dectify.in | Feb 2025 - Apr 2025</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                            <li>Collaborated with UI/UX teams to create responsive web pages.</li>
+                            <li>Assisted in the design and implementation of client-facing interfaces.</li>
+                            <li>Improved visual design skills and deepened understanding of layout and user interaction.</li>
+                        </ul>
+                    </div>
+                     <div class="relative pl-8 sm:pl-12 py-6 group">
+                        <div class="absolute top-0 left-0 h-full w-0.5 bg-gray-200"></div>
+                        <div class="absolute top-5 left-[-9px] sm:left-[-23px] w-5 h-5 sm:w-12 sm:h-12 bg-white rounded-full border-2 border-indigo-500 flex items-center justify-center">
+                           <i data-feather="book-open" class="w-3 h-3 sm:w-6 sm:h-6 text-indigo-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Bachelor of Technology, Information Technology</h3>
+                        <p class="text-indigo-500 font-semibold">Manipal University Jaipur | Expected 2026</p>
+                        <p class="mt-2 text-gray-600">Minor in Web Development</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="max-w-lg mx-auto text-center">
+                    <p class="mb-8">I'm currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                   <form action="https://formspree.io/f/xzzvvbll" method="POST" class="space-y-4">
+    <input type="text" name="name" placeholder="Your Name" required
+        class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+    <input type="email" name="email" placeholder="Your Email" required
+        class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+    <textarea name="message" placeholder="Your Message" rows="5" required
+        class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+
+    <button type="submit"
+        class="w-full bg-indigo-600 text-white p-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">
+        Send Message
+    </button>
+</form>
+
+                    <div class="mt-8">
+                        <p class="text-lg">Or contact me directly:</p>
+                        <a href="mailto:pathakishan003@gmail.com" class="text-indigo-600 hover:underline text-xl font-semibold">pathakishan003@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Ishan Pathak. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://github.com/lordIP03?tab=repositories" target="_blank" class="text-gray-400 hover:text-white">
+                    <i data-feather="github"></i>
+                </a>
+                <a href="mailto:pathakishan003@gmail.com" class="text-gray-400 hover:text-white">
+                    <i data-feather="mail"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
