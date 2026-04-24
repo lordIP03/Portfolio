@@ -31,8 +31,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-panel p-6 glass-panel-hover"
-            style={{ gridColumn: 'span 2' }}
+            className="glass-panel p-6 glass-panel-hover span-2-desktop"
           >
             <h3 className="text-2xl font-bold mb-4" style={{ color: 'var(--text-main)' }}>My Journey</h3>
             <p className="mb-4 text-lg text-muted" style={{ color: 'var(--text-muted)' }}>

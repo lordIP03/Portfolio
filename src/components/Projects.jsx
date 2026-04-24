@@ -50,8 +50,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="hover-card"
-            style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}
+            className="hover-card project-card-layout"
           >
             {/* Project Image block */}
             <div style={{ width: '150px', height: '150px', flexShrink: 0, borderRadius: '12px', overflow: 'hidden', background: '#0B0B0B' }}>

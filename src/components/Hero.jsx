@@ -17,7 +17,8 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        style={{ color: 'var(--text-muted)', fontSize: '1.5rem', marginTop: '2rem', maxWidth: '800px', lineHeight: 1.6 }}
+        className="mobile-text-responsive"
+        style={{ color: 'var(--text-muted)', marginTop: '2rem', maxWidth: '800px', lineHeight: 1.6 }}
       >
         Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into scalable, beautifully crafted enterprise systems and robust full-stack applications.
       </motion.p>

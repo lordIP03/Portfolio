@@ -82,8 +82,8 @@ body {
   flex-direction: column;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-  gap: 3rem;
+  padding: 1.25rem;
+  gap: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -180,7 +180,7 @@ body {
 
 /* Giant Typography */
 .hero-giant-text {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -195,7 +195,65 @@ body {
 
 @media (min-width: 768px) {
   .hero-giant-text {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-giant-text {
     font-size: 6rem;
+  }
+}
+
+/* Responsive Components */
+.project-card-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .project-card-layout {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+.exp-header-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.exp-date-text {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .exp-header-layout {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .exp-date-text {
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+.mobile-text-responsive {
+  font-size: 1.125rem !important;
+}
+@media (min-width: 768px) {
+  .mobile-text-responsive {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .span-2-desktop {
+    grid-column: span 2;
   }
 }
 

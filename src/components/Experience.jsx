@@ -62,12 +62,12 @@ const Experience = () => {
                 CURRENT / MOST RECENT
               </div>
             )}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem', marginTop: exp.highlight ? '0.5rem' : '0' }}>
+            <div className="exp-header-layout" style={{ marginTop: exp.highlight ? '0.5rem' : '0' }}>
               <div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: exp.highlight ? 'var(--color-accent-1)' : '#fff', marginBottom: '0.25rem' }}>{exp.company}</h3>
                 <h4 style={{ fontSize: '1.125rem', color: '#fff', fontWeight: 600 }}>{exp.title}</h4>
               </div>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', textAlign: 'right' }}>{exp.date}</p>
+              <p className="exp-date-text" style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>{exp.date}</p>
             </div>
             
             {Array.isArray(exp.desc) ? (
