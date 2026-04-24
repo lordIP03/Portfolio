@@ -1,62 +1,92 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Server, Wrench, Layout, BookOpen } from 'lucide-react';
 
-const tools = [
-  { name: 'React / Next.js', desc: 'Frontend Frameworks', icon: '⚛️' },
-  { name: 'Node.js', desc: 'Backend Runtime', icon: '🟢' },
-  { name: 'Docker', desc: 'Containerization', icon: '🐳' },
-  { name: 'GitHub Actions', desc: 'CI/CD Automation', icon: '🐙' },
-  { name: 'SQL / NoSQL', desc: 'Database Systems', icon: '🗄️' },
-  { name: 'Tailwind / CSS', desc: 'Styling', icon: '🎨' }
+const skillCategories = [
+  {
+    title: 'Frontend & UI',
+    icon: <Layout size={24} color="var(--color-accent-1)" />,
+    skills: ['React', 'Next.js', 'SolidJS', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Framer Motion', 'Responsive Design']
+  },
+  {
+    title: 'Backend & Data',
+    icon: <Server size={24} color="var(--color-accent-1)" />,
+    skills: ['Node.js', 'Express', 'SQL', 'NoSQL', 'Firebase', 'Java', 'REST APIs']
+  },
+  {
+    title: 'DevOps & Tools',
+    icon: <Wrench size={24} color="var(--color-accent-1)" />,
+    skills: ['Docker', 'GitHub Actions', 'CI/CD Automation', 'Git', 'Figma', 'Power BI']
+  },
+  {
+    title: 'CS Core Concepts',
+    icon: <BookOpen size={24} color="var(--color-accent-1)" />,
+    skills: ['Data Structures', 'Algorithms', 'OOPs', 'Computer Networks', 'DBMS', 'Operating Systems']
+  }
 ];
 
 const PremiumTools = () => {
   return (
-    <section id="tools" style={{ marginTop: '5rem' }}>
+    <section id="skills" style={{ marginTop: '5rem' }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         style={{ marginBottom: '3rem' }}
       >
-        <h2 style={{ fontSize: '3rem', fontWeight: 900, color: '#fff', margin: 0, lineHeight: 1 }}>PREMIUM</h2>
+        <h2 style={{ fontSize: '3rem', fontWeight: 900, color: '#fff', margin: 0, lineHeight: 1 }}>SKILLS /</h2>
         <h2 style={{ fontSize: '3rem', fontWeight: 900, color: 'rgba(255,255,255,0.1)', margin: 0, lineHeight: 1 }}>TOOLS</h2>
       </motion.div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '1.5rem' }}>
-        {/* Responsive grid via inline CSS is tricky, so we rely on parent Flex/Grid or simply flex wrap */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
-          {tools.map((tool, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              style={{ 
-                flex: '1 1 calc(50% - 1.5rem)',
-                minWidth: '250px',
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '1rem' 
-              }}
-            >
-              <div style={{ 
-                width: '60px', height: '60px', 
-                background: '#fff', borderRadius: '16px', 
-                display: 'flex', alignItems: 'center', justifyContent: 'center', 
-                fontSize: '1.5rem' 
-              }}>
-                {tool.icon}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        {skillCategories.map((category, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+            className="hover-card"
+            style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ background: 'rgba(255, 122, 61, 0.1)', padding: '0.75rem', borderRadius: '12px' }}>
+                {category.icon}
               </div>
-              
-              <div>
-                <h4 style={{ color: '#fff', fontSize: '1.125rem', fontWeight: 700, margin: 0 }}>{tool.name}</h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', margin: 0 }}>{tool.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', margin: 0 }}>{category.title}</h3>
+            </div>
+            
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              {category.skills.map((skill, sIdx) => (
+                <span 
+                  key={sIdx} 
+                  style={{ 
+                    background: 'rgba(255,255,255,0.05)', 
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    padding: '0.5rem 1rem', 
+                    borderRadius: '20px', 
+                    fontSize: '0.875rem', 
+                    color: 'var(--text-main)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'default'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 122, 61, 0.1)';
+                    e.currentTarget.style.borderColor = 'var(--color-accent-1)';
+                    e.currentTarget.style.color = '#fff';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.color = 'var(--text-main)';
+                  }}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

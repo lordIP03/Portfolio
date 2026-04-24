@@ -7,13 +7,13 @@ const projects = [
     title: 'StackPilot-AI',
     desc: 'AI product assistant wrapping Next.js and Vercel AI SDK to transform ideas into developer-ready blueprints.',
     imgUrl: 'assets/stackpilot.png',
-    link: '#', 
+    link: 'https://stack-pilot-ai.vercel.app/', 
     tags: ['React', 'Next.js', 'AI']
   },
   {
     title: 'Shopify App Clone',
     desc: 'Full-stack replica with end-to-end auth, CRUD operations, and persistent cart state hosted on Firebase.',
-    imgUrl: 'assets/peak.png', // Fallback, using peak.png temporarily
+    imgUrl: 'assets/Shopify.png',
     link: 'https://my-shopify-app-beige.vercel.app/', 
     tags: ['React', 'Firebase']
   },

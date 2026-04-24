@@ -94,11 +94,13 @@ body {
   }
   
   .sidebar-container {
-    width: 320px;
+    width: 280px;
     flex-shrink: 0;
     position: sticky;
     top: 4rem;
     height: calc(100vh - 8rem);
+    display: flex;
+    align-items: center;
   }
   
   .main-content {
@@ -111,7 +113,7 @@ body {
 .profile-card {
   background: #ffffff;
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,7 +126,7 @@ body {
 .profile-image-container {
   width: 100%;
   aspect-ratio: 4/5;
-  background: var(--color-accent-2);
+  background: transparent;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -134,8 +136,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mix-blend-mode: luminosity; /* gives that cool moody vibe over the orange background */
-  opacity: 0.9;
 }
 
 .profile-name {
