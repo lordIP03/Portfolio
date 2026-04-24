@@ -21,6 +21,22 @@ const Hero = () => {
       >
         Passionate about creating intuitive and engaging user experiences. Specialize in transforming ideas into scalable, beautifully crafted enterprise systems and robust full-stack applications.
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        style={{ marginTop: '3rem' }}
+      >
+        <a 
+          href="assets/Resume.pdf" 
+          download 
+          className="btn-primary" 
+          style={{ borderRadius: '50px', padding: '1rem 2.5rem', fontSize: '1.125rem' }}
+        >
+          Download Resume
+        </a>
+      </motion.div>
     </section>
   );
 };
