@@ -7,21 +7,21 @@ const projects = [
     title: 'StackPilot-AI',
     desc: 'AI product assistant wrapping Next.js and Vercel AI SDK to transform ideas into developer-ready blueprints.',
     imgUrl: 'assets/stackpilot.png',
-    link: 'https://stack-pilot-ai.vercel.app/', 
+    link: 'https://stack-pilot-ai.vercel.app/',
     tags: ['React', 'Next.js', 'AI']
   },
   {
     title: 'Shopify App Clone',
     desc: 'Full-stack replica with end-to-end auth, CRUD operations, and persistent cart state hosted on Firebase.',
     imgUrl: 'assets/Shopify.png',
-    link: 'https://my-shopify-app-beige.vercel.app/', 
+    link: 'https://my-shopify-app-beige.vercel.app/',
     tags: ['React', 'Firebase']
   },
   {
     title: 'PeakPursuit',
     desc: 'Sophisticated platform for camping recommendations using advanced JS and data analytics.',
     imgUrl: 'assets/peak.png',
-    link: '#',
+    link: 'https://peak-pursuit-five.vercel.app/',
     tags: ['JS', 'Analytics']
   }
 ];
@@ -41,9 +41,9 @@ const Projects = () => {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
         {projects.map((proj, idx) => (
-          <motion.a 
-            href={proj.link} 
-            target="_blank" 
+          <motion.a
+            href={proj.link}
+            target="_blank"
             rel="noreferrer"
             key={idx}
             initial={{ opacity: 0, y: 20 }}
@@ -56,12 +56,12 @@ const Projects = () => {
             <div style={{ width: '150px', height: '150px', flexShrink: 0, borderRadius: '12px', overflow: 'hidden', background: '#0B0B0B' }}>
               <img src={proj.imgUrl} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
-            
+
             {/* Content block */}
             <div style={{ flexGrow: 1 }}>
               <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>{proj.title}</h3>
               <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', lineHeight: 1.5 }}>{proj.desc}</p>
-              
+
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 {proj.tags.map(tag => (
                   <span key={tag} style={{ background: 'rgba(255,255,255,0.05)', padding: '0.25rem 0.5rem', borderRadius: '4px', fontSize: '0.75rem', color: '#fff' }}>
