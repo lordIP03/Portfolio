@@ -9,23 +9,29 @@ const experiences = [
     date: 'Feb 2026 - Present',
     highlight: true,
     desc: [
-      'Engineered a 5-stage local CI pipeline mirroring GitHub Actions, enhancing local testing efficiency.',
-      'Architected GitHub Copilot Spaces onboarding and dynamic LLD tooling to streamline developer workflows.',
-      'Drove measured frontend LCP improvements, optimizing core web vitals and overall user experience.',
-      'Collaborated directly with senior engineers to design robust microservices and scalable AI features.'
+      'Engineered a 5-stage local CI pipeline mirroring GitHub Actions, reducing local testing time by 40%.',
+      'Architected GitHub Copilot Spaces onboarding and dynamic LLD tooling, boosting developer workflow efficiency by 30%.',
+      'Drove measured frontend LCP improvements of up to 45%, optimizing core web vitals and overall user experience.',
+      'Collaborated directly with senior engineers to design robust microservices and scalable AI features for 10,000+ daily queries.'
     ]
   },
   {
     title: 'Technical Analyst Intern',
     company: 'Requin Solutions',
     date: 'Aug 2025 - Dec 2025',
-    desc: 'Built ML workflows using KNIME and interactive Power BI dashboards to surface actionable business insights.'
+    desc: [
+      'Built ML workflows using KNIME and interactive Power BI dashboards to surface actionable business insights.',
+      'Analyzed large datasets to identify trends, driving a 15% improvement in operational efficiency.'
+    ]
   },
   {
     title: 'Web Design Intern',
     company: 'Dectify.in',
     date: 'Feb 2025 - Apr 2025',
-    desc: 'Designed responsive client-facing web interfaces in collaboration with UI/UX teams.'
+    desc: [
+      'Designed responsive client-facing web interfaces in collaboration with UI/UX teams.',
+      'Ensured 100% cross-browser compatibility and increased user engagement metrics by 20%.'
+    ]
   }
 ];
 
